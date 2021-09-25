@@ -1,4 +1,5 @@
 export const questions = [{
+    subject: "javascript",
     question: "What does DOM stand for? ",
     answers: [{
         text: "Document Object Model",
@@ -12,8 +13,10 @@ export const questions = [{
     }]
 },
 {
+    subject: "javascript",
     question: "What is a Callback function? ",
     answers: [{
+
         text: "A function that calls back the DOM",
         correct: false
     }, {
@@ -25,6 +28,7 @@ export const questions = [{
     }]
 },
 {
+    subject: "javascript",
     question: "What is the difference between property and method setup",
     answers: [{
         text: "Properties are set up without quatation marks",
@@ -38,6 +42,7 @@ export const questions = [{
     }]
 },
 {
+    subject: "javascript",
     question: "How do you print “Hello World” to the console? ",
     answers: [{
         text: 'console.log("Hello World")',
@@ -51,6 +56,7 @@ export const questions = [{
     }]
 },
 {
+    subject: "javascript",
     question: "Which of the following are the Logical operators for Not, Or, And?",
     answers: [{
         text: "x, ?, & ",
@@ -64,6 +70,7 @@ export const questions = [{
     }]
 },
 {
+    subject: "javascript",
     question: "Which one of the values is NOT Falsy? ",
     answers: [{
         text: "Null",
@@ -77,6 +84,7 @@ export const questions = [{
     }]
 },
 {
+    subject: "javascript",
     question: "What is the correct syntax of For Loops? ",
     answers: [{
         text: 'for (var i = 0 ; i < n ; i++ ) { };',
@@ -90,6 +98,7 @@ export const questions = [{
     }]
 },
 {
+    subject: "javascript",
     question: "What Method is used to extract the number of items in an array? ",
     answers: [{
         text: "The extract function",
@@ -103,6 +112,7 @@ export const questions = [{
     }]
 },
 {
+    subject: "javascript",
     question: "How do you return the nth item of a string? ",
     answers: [{
         text: 'string.charAt(n)',
@@ -117,6 +127,7 @@ export const questions = [{
 },
 
 {
+    subject: "javascript",
     question: "How do you concatenate strings in JavaScript? ",
     answers: [{
         text: " stringA && stringB && stringC",
@@ -129,4 +140,13 @@ export const questions = [{
         correct: false
     }]
 },
+{
+    subject: "http",
+    question: "How do you concatenate strings in JavaScript? ",
+    answers: [{
+        text: "Create, Read, Update, Delete with their corresponding HTTP verbs: Post, Get, Put , Delete",
+        correct: true
+
+    }]
+}
 ];
