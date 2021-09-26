@@ -12,7 +12,6 @@ const Nav = () => {
                     <Link href='/about'>About</Link>
                 </li>
             </ul>
-
         </nav>
     )
 }
