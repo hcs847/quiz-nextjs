@@ -1,8 +1,13 @@
+import Head from 'next/head';
+
 const about = () => {
     return (
-        <div>
+        <>
+            <Head>
+                <title>Quiz Base | About</title>
+            </Head>
             <p>About page</p>
-        </div>
+        </>
     )
 }
 
