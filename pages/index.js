@@ -3,9 +3,12 @@ import Image from 'next/image'
 
 export default function Home() {
   return (
-    <div >
-
+    < >
+      <Head>
+        <title>Quiz Base | Home</title>
+        <meta name='keywords' content='javascript quiz' />
+      </Head>
       <p>Home page</p>
-    </div>
+    </>
   )
 }
