@@ -1,9 +1,7 @@
-import { v4 as uuidv4 } from 'uuid';
-
 export const questions = [{
     subject: "javascript",
     question: "What does DOM stand for? ",
-    id: uuidv4(),
+    id: 1,
     answers: [{
         text: "Document Object Model",
         correct: true
@@ -18,7 +16,7 @@ export const questions = [{
 {
     subject: "javascript",
     question: "What is a Callback function? ",
-    id: uuidv4(),
+    id: 2,
     answers: [{
 
         text: "A function that calls back the DOM",
@@ -34,7 +32,7 @@ export const questions = [{
 {
     subject: "javascript",
     question: "What is the difference between property and method setup",
-    id: uuidv4(),
+    id: 3,
     answers: [{
         text: "Properties are set up without quatation marks",
         correct: false
@@ -49,7 +47,7 @@ export const questions = [{
 {
     subject: "javascript",
     question: "How do you print “Hello World” to the console? ",
-    id: uuidv4(),
+    id: 4,
     answers: [{
         text: 'console.log("Hello World")',
         correct: true
@@ -64,7 +62,7 @@ export const questions = [{
 {
     subject: "javascript",
     question: "Which of the following are the Logical operators for Not, Or, And?",
-    id: uuidv4(),
+    id: 5,
     answers: [{
         text: "x, ?, & ",
         correct: false
@@ -79,7 +77,7 @@ export const questions = [{
 {
     subject: "javascript",
     question: "Which one of the values is NOT Falsy? ",
-    id: uuidv4(),
+    id: 6,
     answers: [{
         text: "Null",
         correct: false
@@ -94,7 +92,7 @@ export const questions = [{
 {
     subject: "javascript",
     question: "What is the correct syntax of For Loops? ",
-    id: uuidv4(),
+    id: 7,
     answers: [{
         text: 'for (var i = 0 ; i < n ; i++ ) { };',
         correct: true
@@ -109,7 +107,7 @@ export const questions = [{
 {
     subject: "javascript",
     question: "What Method is used to extract the number of items in an array? ",
-    id: uuidv4(),
+    id: 8,
     answers: [{
         text: "The extract function",
         correct: false
@@ -124,7 +122,7 @@ export const questions = [{
 {
     subject: "javascript",
     question: "How do you return the nth item of a string? ",
-    id: uuidv4(),
+    id: 9,
     answers: [{
         text: 'string.charAt(n)',
         correct: true
@@ -140,7 +138,7 @@ export const questions = [{
 {
     subject: "javascript",
     question: "How do you concatenate strings in JavaScript? ",
-    id: uuidv4(),
+    id: 10,
     answers: [{
         text: " stringA && stringB && stringC",
         correct: false
@@ -155,7 +153,7 @@ export const questions = [{
 {
     subject: "http",
     question: "How do you concatenate strings in JavaScript? ",
-    id: uuidv4(),
+    id: 11,
     answers: [{
         text: "Create, Read, Update, Delete with their corresponding HTTP verbs: Post, Get, Put , Delete",
         correct: true

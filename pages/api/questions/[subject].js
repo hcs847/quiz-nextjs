@@ -1,4 +1,4 @@
-import { questions } from '../../../data';
+import { questions } from '/public/data';
 
 export default function handler({ query: { subject } }, res) {
     // res.status(200).json(questions)
