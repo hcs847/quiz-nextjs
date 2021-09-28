@@ -23,7 +23,7 @@ export default function Home({ quizes }) {
   )
 }
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const res = await fetch(`${server}/api/questions`);
   console.log(await res, "res.data===");
   const quizes = await res.json();
@@ -34,7 +34,7 @@ export const getStaticProps = async () => {
     }
   }
   return {
-    props: { quizes: quizes }
+    props: { quizes: JSON.parse(JSON.stringify(quizes)) }
   }
 }
 
