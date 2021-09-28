@@ -25,7 +25,6 @@ export default function Home({ quizes }) {
 
 export const getServerSideProps = async () => {
   const res = await fetch(`${server}/api/questions`);
-  console.log(await res, "res.data===");
   const quizes = await res.json();
 
   if (!quizes) {
@@ -34,7 +33,7 @@ export const getServerSideProps = async () => {
     }
   }
   return {
-    props: { quizes: JSON.parse(JSON.stringify(quizes)) }
+    props: { quizes }
   }
 }
 
