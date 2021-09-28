@@ -5,11 +5,11 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-color: rgb(70, 70, 70);
-  background-image: url('/quiz-transp.gif');
+  /* background-image: url('/quiz-transp.gif');
   background-repeat: no-repeat;
   background-size: 35%;
   background-position-y: 15vh;
-  background-position-x:55vw;
+  background-position-x:55vw; */
   color: white;
 }
 
