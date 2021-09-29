@@ -1,8 +1,16 @@
 import Head from 'next/head';
+import { useState } from 'react';
+import QuestionsList from '../components/QuestionsList';
 import { server } from '../config';
-// console.log(server);
+
 
 export default function Home({ quizes }) {
+  const [showQuestions, setShowQuestions] = useState({});
+  const toggleQuestions = (subject) => {
+    setShowQuestions({ ...showQuestions, [subject]: !showQuestions[subject] });
+    console.log(subject, showQuestions)
+  }
+
   return (
     < >
       <Head>
@@ -10,11 +18,16 @@ export default function Home({ quizes }) {
         <meta name='keywords' content='javascript quiz' />
       </Head>
       <div >
-        <h3>Questions list</h3>
+        <h3>quizes list</h3>
         {quizes.map(quiz => (
-          <div key={quiz.id}>
-
-            <p>{quiz.question}</p>
+          <div key={quiz.subject}>
+            <button type='button'
+              className='btn btn-modal'
+              onClick={() => toggleQuestions(quiz.subject)}
+            >{quiz.subject}</button>
+            <div className={showQuestions[quiz.subject] ? 'question' : 'hidden'}>
+              <QuestionsList quiz={quiz} />
+            </div>
           </div>
         ))}
 
@@ -24,9 +37,9 @@ export default function Home({ quizes }) {
 }
 
 export const getServerSideProps = async () => {
-  const res = await fetch(`${server}/api/questions`);
-  console.log(await res, "res.data===");
+  const res = await fetch(`${server}/api/quizes`);
   const quizes = await res.json();
+  // console.log('quizes', quizes);
 
   if (!quizes) {
     return {
@@ -34,23 +47,6 @@ export const getServerSideProps = async () => {
     }
   }
   return {
-    props: { quizes: JSON.parse(JSON.stringify(quizes)) }
+    props: { quizes }
   }
 }
-
-// export const getStaticPaths = async () => {
-//   const res = await fetch(`${server}/api/articles`)
-
-//   const articles = await res.json()
-
-//   const ids = articles.map((article) => article.id)
-//   const paths = ids.map((id) => ({ params: { id: id.toString() } }))
-
-//   return {
-//     paths,
-//     fallback: false,
-//   }
-// }
-
-
-// export default Quizes;
