@@ -1,12 +1,14 @@
 import headerStyles from '../styles/Header.module.css';
+import Image from 'next/image';
+import logo from '../public/quiz-transp.gif';
 
 const Header = () => {
     return (
-        <div className='flex fx-center fx-col'>
-            <h1 className={headerStyles.title}>Javascript Quiz Home</h1>
-            <p className={headerStyles.description}>Try a quiz to test your Full Stack knowledge
-                <br />Retake it until you Ace it!</p>
-        </div>
+        <header className='flex'>
+            <h1 className={headerStyles.title}
+            ><span>Javascript</span><span> Interview</span><span> Prep</span></h1>
+            <Image src={logo} width={249} height={150} />
+        </header>
     )
 }
 

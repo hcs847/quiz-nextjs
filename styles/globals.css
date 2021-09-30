@@ -1,7 +1,11 @@
+html {
+  scroll-behavior: smooth;
+}
 html,
 body {
   padding: 0;
   margin: 0;
+  grid-template-columns: min-content 1fr;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-color: rgb(70, 70, 70);
@@ -9,6 +13,24 @@ body {
 }
 * {
   box-sizing: border-box;
+}
+
+header {
+  grid-column: 1 / 9;
+  text-align: center;
+  background: rgb(109, 11, 63);
+  color: rgb(24, 105, 146);
+  position: relative;
+}
+header::after {
+  position: absolute;
+  content: '';
+  height: 10px;
+  width: 100%;
+  background: white;
+  left:0;
+  right: 0;
+  bottom: -1px;
 }
 
 a {

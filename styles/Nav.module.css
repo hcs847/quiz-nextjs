@@ -1,33 +1,24 @@
 .nav {
-    height: 50px;
-    padding: 10px;
+    white-space: nowrap;
     color: white;
-    background: rgb(24, 23, 23);
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    position:fixed;
-    top:0;
-    left:0;
-    right: 0;
-    min-height: 7vh;
+    background: rgb(50, 50, 50);
+    width: 15vw;
   }
   
   .nav ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     list-style: none;
+    position:sticky;
+    top:0;
+    margin:0;
+    padding: 0;
   }
   
   .nav ul li a {
-    margin: 5px 15px;
+    margin: 0.5rem 1rem;
+    display: block;
     cursor: pointer;
   }
   
   .logo {
-    display: flex;
-    align-content: flex-end;
-    margin-left: auto;
-    margin-top: 50vh;
+    grid-column: 1 / 3;
   }
