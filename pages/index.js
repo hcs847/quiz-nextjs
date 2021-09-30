@@ -3,6 +3,7 @@ import { useState } from 'react';
 import QuestionsList from '../components/QuestionsList';
 import { server } from '../config';
 
+import { getQuizes } from './api/quizes';
 
 export default function Home({ quizes }) {
   const [showQuestions, setShowQuestions] = useState({});
@@ -37,9 +38,15 @@ export default function Home({ quizes }) {
 }
 
 export const getServerSideProps = async () => {
-  const res = await fetch(`${server}/api/quizes`);
-  const quizes = await res.json();
-  // console.log('quizes', quizes);
+
+  // const res = await fetch(`${server}/api/quizes`);
+  // const quizes = await res.json();
+
+  const quizes = getQuizes();
+
+  console.log('quizes from get props', quizes, typeof quizes);
+
+  // getData();
 
   if (!quizes) {
     return {
@@ -47,6 +54,6 @@ export const getServerSideProps = async () => {
     }
   }
   return {
-    props: { quizes }
+    props: { quizes: quizes.data }
   }
 }
