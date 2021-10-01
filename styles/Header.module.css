@@ -14,14 +14,47 @@
   margin: 0;
   font-size: 4rem;
   position: relative;
+  display: flex;
   background: rgb(50, 50, 50);
   height: 100%;
-  padding: 1.5%;
+  padding: 0 5%;
+  width: 100%;
 }
 
 .title,
 .description {
   text-align: left;
+}
+
+.img {
+  display: flex;
+  justify-content: center;
+  flex-basis:18%;
+}
+.int {
+    font-size: 56px;
+    color: #B9136B !important;
+    padding: 0;
+    margin: -10px 22% 0 auto;
+    display: inline-block;
+    line-height: 0.8;
+}
+.js {
+  font-size: 130px;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  line-height: 1;
+}
+
+.prep {
+  font-size: 180px;
+    text-transform: uppercase;
+    color: white !important;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    line-height: 1.1;
 }
 
 .description {

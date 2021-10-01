@@ -1,13 +1,22 @@
 import headerStyles from '../styles/Header.module.css';
 import Image from 'next/image';
-import logo from '../public/quiz-transp.gif';
+import logo from '../public/quiz-trans.gif';
 
 const Header = () => {
     return (
         <header className='flex'>
-            <h1 className={headerStyles.title}
-            ><span>Javascript</span><span> Interview</span><span> Prep</span></h1>
-            <Image src={logo} width={249} height={150} />
+            <div className={headerStyles.img}>
+                <Image src={logo} width={200} height={200} />
+            </div>
+            <div className={headerStyles.title}>
+                <div className='flex fx-col'>
+                    <span className={headerStyles.js}>javascript</span>
+                    <span className={headerStyles.int}> interview</span>
+                </div>
+                <div>
+                    <span className={headerStyles.prep}> Prep</span>
+                </div>
+            </div>
         </header>
     )
 }
