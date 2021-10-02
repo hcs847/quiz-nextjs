@@ -170,5 +170,10 @@ export const quizes = [{
         }
     ]
 
+},
+{
+    subject: "react",
+    questions: [
+    ]
 }
 ];

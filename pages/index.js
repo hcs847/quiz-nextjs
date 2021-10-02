@@ -16,7 +16,7 @@ export default function Home({ quizes }) {
         <meta name='keywords' content='javascript quiz' />
       </Head>
       <div >
-        <h3>quizes list</h3>
+        {/* <h3>Subjects</h3>
         {quizes.map(quiz => (
           <>
             <div key={quiz.subject}>
@@ -29,7 +29,7 @@ export default function Home({ quizes }) {
               <QuestionsList quiz={quiz} />
             </div>
           </>
-        ))}
+        ))} */}
       </div>
     </>
   )
