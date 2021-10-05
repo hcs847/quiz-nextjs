@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 const QuestionsList = ({ quiz }) => {
-    console.log(quiz, 'from qustionList');
+    // console.log(quiz, 'from qustionList');
     return (
         <>
             {quiz.questions.map(q => (

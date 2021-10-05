@@ -2,8 +2,17 @@ import { quizes } from '/public/data';
 
 export const getSubject = (subject) => {
     const filteredSubject = quizes.filter(question => question.subject === subject);
-    console.log(filteredSubject[0].questions[0], '==filtered [subject] questions', subject, "==subject from getsubject");
-    return { subject: filteredSubject }
+    const questions = filteredSubject[0].questions.map((q) => (
+
+        {
+            question: q.description,
+            answers: q.answers.map(q => q.answerText)
+        }
+    )
+    );
+
+    console.log("questions===", questions, filteredSubject[0].questions, '==filtered [subject] questions');
+    return questions;
 
 }
 
