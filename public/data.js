@@ -174,6 +174,79 @@ export const quizes = [{
 {
     subject: "react",
     questions: [
+        {
+            question: "",
+            id: 12,
+            answers: [{
+                text: "",
+                correct: ""
+            }]
+        }
+    ]
+},
+{
+    subject: "nextjs",
+    questions: [
+        {
+            question: "",
+            id: 13,
+            answers: [{
+                text: "",
+                correct: ""
+            }]
+        }
+    ]
+},
+{
+    subject: "node",
+    questions: [
+        {
+            question: "",
+            id: 14,
+            answers: [{
+                text: "",
+                correct: ""
+            }]
+        }
+    ]
+},
+{
+    subject: "graphQl",
+    questions: [
+        {
+            question: "",
+            id: 15,
+            answers: [{
+                text: "",
+                correct: ""
+            }]
+        }
+    ]
+},
+{
+    subject: "css",
+    questions: [
+        {
+            question: "",
+            id: 16,
+            answers: [{
+                text: "",
+                correct: ""
+            }]
+        }
+    ]
+},
+{
+    subject: "html",
+    questions: [
+        {
+            question: "",
+            id: 17,
+            answers: [{
+                text: "",
+                correct: ""
+            }]
+        }
     ]
 }
 ];
