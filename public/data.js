@@ -3,153 +3,153 @@ export const quizes = [{
     subject: "javascript",
     questions: [
         {
-            question: "What does DOM stand for? ",
+            description: "What does DOM stand for? ",
             id: 1,
             answers: [{
-                text: "Document Object Model",
+                answerText: "Document Object Model",
                 correct: true
             }, {
-                text: "Document Objective Modeling",
+                answerText: "Document Objective Modeling",
                 correct: false
             }, {
-                text: "Domain Object Mail",
+                answerText: "Domain Object Mail",
                 correct: false
             }]
         },
         {
 
-            question: "What is a Callback function? ",
+            description: "What is a Callback function? ",
             id: 2,
             answers: [{
 
-                text: "A function that calls back the DOM",
+                answerText: "A function that calls back the DOM",
                 correct: false
             }, {
-                text: "A function passed as an argument into another function",
+                answerText: "A function passed as an argument into another function",
                 correct: true
             }, {
-                text: "A function that calls back another file",
+                answerText: "A function that calls back another file",
                 correct: false
             }]
         },
         {
 
-            question: "What is the difference between property and method setup",
+            description: "What is the difference between property and method setup",
             id: 3,
             answers: [{
-                text: "Properties are set up without quatation marks",
+                answerText: "Properties are set up without quatation marks",
                 correct: false
             }, {
-                text: "A property setup syntax is: .property = value, while for Methods it’s: method( )",
+                answerText: "A property setup syntax is: .property = value, while for Methods it’s: method( )",
                 correct: true
             }, {
-                text: "Methods are setup with at the begining of the code",
+                answerText: "Methods are setup with at the begining of the code",
                 correct: false
             }]
         },
         {
 
-            question: "How do you print “Hello World” to the console? ",
+            description: "How do you print “Hello World” to the console? ",
             id: 4,
             answers: [{
-                text: 'console.log("Hello World")',
+                answerText: 'console.log("Hello World")',
                 correct: true
             }, {
-                text: 'console.log.Hello World',
+                answerText: 'console.log.Hello World',
                 correct: false
             }, {
-                text: 'alert.Hello.World',
+                answerText: 'alert.Hello.World',
                 correct: false
             }]
         },
         {
 
-            question: "Which of the following are the Logical operators for Not, Or, And?",
+            description: "Which of the following are the Logical operators for Not, Or, And?",
             id: 5,
             answers: [{
-                text: "x, ?, & ",
+                answerText: "x, ?, & ",
                 correct: false
             }, {
-                text: " ! , || , && ",
+                answerText: " ! , || , && ",
                 correct: true
             }, {
-                text: " !!, |, # ",
+                answerText: " !!, |, # ",
                 correct: false
             }]
         },
         {
 
-            question: "Which one of the values is NOT Falsy? ",
+            description: "Which one of the values is NOT Falsy? ",
             id: 6,
             answers: [{
-                text: "Null",
+                answerText: "Null",
                 correct: false
             }, {
-                text: "’False’",
+                answerText: "’False’",
                 correct: true
             }, {
-                text: "0",
+                answerText: "0",
                 correct: false
             }]
         },
         {
 
-            question: "What is the correct syntax of For Loops? ",
+            description: "What is the correct syntax of For Loops? ",
             id: 7,
             answers: [{
-                text: 'for (var i = 0 ; i < n ; i++ ) { };',
+                answerText: 'for (var i = 0 ; i < n ; i++ ) { };',
                 correct: true
             }, {
-                text: 'for (var i = 0 , i < n , i++ );',
+                answerText: 'for (var i = 0 , i < n , i++ );',
                 correct: false
             }, {
-                text: 'for (var i = 0 &&i < n && i++ );',
+                answerText: 'for (var i = 0 &&i < n && i++ );',
                 correct: false
             }]
         },
         {
 
-            question: "What Method is used to extract the number of items in an array? ",
+            description: "What Method is used to extract the number of items in an array? ",
             id: 8,
             answers: [{
-                text: "The extract function",
+                answerText: "The extract function",
                 correct: false
             }, {
-                text: "The length property",
+                answerText: "The length property",
                 correct: true
             }, {
-                text: "The get method",
+                answerText: "The get method",
                 correct: false
             }]
         },
         {
 
-            question: "How do you return the nth item of a string? ",
+            description: "How do you return the nth item of a string? ",
             id: 9,
             answers: [{
-                text: 'string.charAt(n)',
+                answerText: 'string.charAt(n)',
                 correct: true
             }, {
-                text: '"string.nth()"',
+                answerText: '"string.nth()"',
                 correct: false
             }, {
-                text: '"string(nth) ="',
+                answerText: '"string(nth) ="',
                 correct: false
             }]
         },
 
         {
 
-            question: "How do you concatenate strings in JavaScript? ",
+            description: "How do you concatenate strings in JavaScript? ",
             id: 10,
             answers: [{
-                text: " stringA && stringB && stringC",
+                answerText: " stringA && stringB && stringC",
                 correct: false
             }, {
-                text: "stringA + stringB + stringC ",
+                answerText: "stringA + stringB + stringC ",
                 correct: true
             }, {
-                text: "stringA.stringB.sringC",
+                answerText: "stringA.stringB.sringC",
                 correct: false
             }]
         },
@@ -160,10 +160,10 @@ export const quizes = [{
     questions: [
 
         {
-            question: "How do you concatenate strings in JavaScript? ",
+            description: "How do you concatenate strings in JavaScript? ",
             id: 11,
             answers: [{
-                text: "Create, Read, Update, Delete with their corresponding HTTP verbs: Post, Get, Put , Delete",
+                answerText: "Create, Read, Update, Delete with their corresponding HTTP verbs: Post, Get, Put , Delete",
                 correct: true
 
             }]
@@ -175,10 +175,10 @@ export const quizes = [{
     subject: "react",
     questions: [
         {
-            question: "",
+            description: "",
             id: 12,
             answers: [{
-                text: "",
+                answerText: "",
                 correct: ""
             }]
         }
@@ -188,10 +188,10 @@ export const quizes = [{
     subject: "nextjs",
     questions: [
         {
-            question: "",
+            description: "",
             id: 13,
             answers: [{
-                text: "",
+                answerText: "",
                 correct: ""
             }]
         }
@@ -201,10 +201,10 @@ export const quizes = [{
     subject: "node",
     questions: [
         {
-            question: "",
+            description: "",
             id: 14,
             answers: [{
-                text: "",
+                answerText: "",
                 correct: ""
             }]
         }
@@ -214,10 +214,10 @@ export const quizes = [{
     subject: "graphQl",
     questions: [
         {
-            question: "",
+            description: "",
             id: 15,
             answers: [{
-                text: "",
+                answerText: "",
                 correct: ""
             }]
         }
@@ -227,10 +227,10 @@ export const quizes = [{
     subject: "css",
     questions: [
         {
-            question: "",
+            description: "",
             id: 16,
             answers: [{
-                text: "",
+                answerText: "",
                 correct: ""
             }]
         }
@@ -240,10 +240,10 @@ export const quizes = [{
     subject: "html",
     questions: [
         {
-            question: "",
+            description: "",
             id: 17,
             answers: [{
-                text: "",
+                answerText: "",
                 correct: ""
             }]
         }
