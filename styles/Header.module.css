@@ -55,6 +55,7 @@
     margin: 0;
     display: inline-block;
     line-height: 1.1;
+    letter-spacing: -5px;
 }
 
 .description {
