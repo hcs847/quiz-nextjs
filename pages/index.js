@@ -15,22 +15,9 @@ export default function Home({ quizes }) {
         <title>Quiz Base | Home</title>
         <meta name='keywords' content='javascript quiz' />
       </Head>
-      <div >
-        {/* <h3>Subjects</h3>
-        {quizes.map(quiz => (
-          <>
-            <div key={quiz.subject}>
-              <button type='button'
-                className='btn btn-modal'
-                onClick={() => toggleQuestions(quiz.subject)}
-              >{quiz.subject}</button>
-            </div>
-            <div className={showQuestions[quiz.subject] ? 'question' : 'hidden'}>
-              <QuestionsList quiz={quiz} />
-            </div>
-          </>
-        ))} */}
-      </div>
+      <h1>
+        Welcome to your javascript interview prep site.
+      </h1>
     </>
   )
 }
