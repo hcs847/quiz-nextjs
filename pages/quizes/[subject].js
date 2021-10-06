@@ -13,7 +13,7 @@ const Subject = ({ quiz }) => {
                 <ul key={q.question}>
                     <li>{q.question}</li>
                     {q.answers.map(a => (
-                        <div style={{ color: 'rgb(25,101, 147)', fontFamily: 'Futura', background: 'rgba(255,255,255,0.7)', marginTop: '0.3rem', width: '75%' }} key={a}>{a}</div>
+                        <div style={{ color: 'rgb(25,101, 147)', fontFamily: 'Georgia', background: 'rgba(255,255,255,0.7)', marginTop: '0.3rem', width: '75%' }} key={a}>{a}</div>
                     ))
                     }
                 </ul>
@@ -24,7 +24,6 @@ const Subject = ({ quiz }) => {
 
 export const getStaticProps = async (context) => {
     const quiz = getSubject(context.params.subject);
-    // console.log("quiz.question from getStatic", quiz);
     return {
         props: {
             quiz
@@ -33,12 +32,9 @@ export const getStaticProps = async (context) => {
 }
 
 export const getStaticPaths = async () => {
-    const res = await fetch(`${server}/api/quizes`);
+    const res = await fetch(`${server}api/quizes`);
     const quizes = await res.json();
-    // console.log(quizes.data, '===from getpath')
-
     const subjects = quizes.data.map((quiz) => quiz.subject);
-    // console.log('subject paths', subjects);
     const paths = subjects.map((subject) => ({ params: { subject } }));
 
     return {
