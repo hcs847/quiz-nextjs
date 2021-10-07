@@ -11,7 +11,7 @@ export default function Nav() {
             <ul>
                 {subjects.map(subject => (
                     <li key={subject}>
-                        <Link href={`quizes/${subject}`}>{subject}</Link>
+                        <Link href={`/quizes/${subject}`}>{subject}</Link>
                     </li>
                 ))}
             </ul>
