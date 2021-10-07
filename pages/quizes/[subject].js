@@ -1,19 +1,19 @@
 import { server } from "../../config";
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { getSubject } from "../api/quizes/[subject]";
+import quizStyles from '../../styles/quiz.module.css'
 
 const Subject = ({ quiz }) => {
     const router = useRouter();
     const { subject } = router.query;
     return (
         <>
-            <p>{subject} Quiz</p>
+            <h2 className={quizStyles.title}>{subject} Quiz</h2>
             {quiz.map(q => (
                 <ul key={q.question}>
-                    <li>{q.question}</li>
+                    <li className={quizStyles.question}>{q.question}</li>
                     {q.answers.map(a => (
-                        <div style={{ color: 'rgb(25,101, 147)', fontFamily: 'Georgia', background: 'rgba(255,255,255,0.7)', marginTop: '0.3rem', width: '75%' }} key={a}>{a}</div>
+                        <div className={quizStyles.answers} key={a}>{a}</div>
                     ))
                     }
                 </ul>

@@ -1,0 +1,15 @@
+.title {
+    text-transform: capitalize;
+}
+.question {
+    font-family: 'Futura';
+    font-size:1.2rem;
+}
+
+.answers {
+    color: rgb(25,101, 147);
+    font-family: Georgia;
+    background: rgba(255,255,255,0.7);
+    margin-top: 0.3rem;
+    width: 80%; 
+}
