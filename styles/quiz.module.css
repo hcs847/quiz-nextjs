@@ -1,15 +1,61 @@
 .title {
     text-transform: capitalize;
+    /* color:rgb(25,101, 147); */
+    position: relative;
+    width:max-content;
+} 
+.title::after {
+    position: absolute;
+    content: '';
+    height: 5px;
+    width: 100%;
+    background: rgb(109, 11, 63);
+    left:0;
+    right: 0;
+    bottom: -10px;
 }
 .question {
     font-family: 'Futura';
     font-size:1.2rem;
 }
 
+.answers input {
+    border-color: rgb(25,101, 147);
+}
 .answers {
     color: rgb(25,101, 147);
-    font-family: Georgia;
-    background: rgba(255,255,255,0.7);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.45);
+    border:2px solid rgb(25,101, 147);
     margin-top: 0.3rem;
-    width: 80%; 
+    width: 80%;
+    line-height: 1.5; 
+    position: relative;
+    z-index:1;
+}
+
+.answers::before {
+  position: absolute;
+  z-index:-1;
+  content: '';
+  height: 100%;
+  background: white;
+  width: 100%;
+  left: 0;
+  right: 0;
+  transition: -webkit-transform 300ms ease-in;
+  transition: transform 300ms ease-in;
+  transition: transform 300ms ease-in, -webkit-transform 300ms ease-in;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: right;
+  transform-origin: right;
+}
+
+.answers:hover::before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transform-origin: left;
+    transform-origin: left;
 }
