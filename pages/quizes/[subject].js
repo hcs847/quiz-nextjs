@@ -12,8 +12,12 @@ const Subject = ({ quiz }) => {
             {quiz.map(q => (
                 <ul key={q.question}>
                     <li className={quizStyles.question}>{q.question}</li>
+
                     {q.answers.map(a => (
-                        <div className={quizStyles.answers} key={a}>{a}</div>
+                        <div className={quizStyles.answers} key={a}>
+                            <input type='checkbox' unchecked />
+                            {a}
+                        </div>
                     ))
                     }
                 </ul>
