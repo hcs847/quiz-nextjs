@@ -22,7 +22,7 @@
 .answers input {
     border-color: rgb(25,101, 147);
 }
-.answers {
+.answers, .answer__checked {
     position: relative;
     z-index:1;
     color: #ccd6f6;
@@ -66,7 +66,7 @@
     transform-origin: left;
 }
 
-.answer-is-checked {
+.answer__checked {
     color: #272e38;
     background: #ccd6f6;
 }

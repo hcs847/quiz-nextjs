@@ -7,7 +7,11 @@ import quizStyles from '../../styles/quiz.module.css'
 const Subject = ({ quiz }) => {
     const router = useRouter();
     const { subject } = router.query;
-    const [checked, setChecked] = useState(false);
+    const [checked, setChecked] = useState({});
+    const toggleAnswer = (answer) => {
+        // setting state to dynamically created element
+        setChecked({ [answer]: !checked[answer] })
+    }
 
 
     return (
@@ -16,7 +20,8 @@ const Subject = ({ quiz }) => {
             <div className={quizStyles.card_quiz}>
                 <div className={quizStyles.question}>{quiz[0].question}</div>
                 {quiz[0].answers.map(a => (
-                    <div className={quizStyles.answers} key={a}>
+                    <div className={checked[a] ? quizStyles.answer__checked : quizStyles.answers} key={a}
+                        onClick={() => toggleAnswer(a)}>
                         {a}
                     </div>
                 ))
