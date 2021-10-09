@@ -1,8 +1,10 @@
 .nav {
     white-space: nowrap;
     color: white;
-    background: rgb(50, 50, 50);
+    background: #272e38;
     width: 15vw;
+    padding-left: 0.5rem;
+    padding-top: 2rem;
   }
   
   .nav ul {
