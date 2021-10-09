@@ -7,8 +7,8 @@ body {
   margin: 0;
   grid-template-columns: min-content 1fr;
   font-family: "Futura-CondensedExtraBold", Futura, sans-serif;
-  background-color: rgb(70, 70, 70);
-  color: white;
+  background-color: rgba(23, 29, 36, 0.85);
+  color: #ccd6f6;
 }
 * {
   box-sizing: border-box;
@@ -17,7 +17,7 @@ body {
 header {
   grid-column: 1 / 9;
   /* text-align: center; */
-  background: rgb(109, 11, 63);
+  background: rgba(170, 8, 94,0.75);
   color: rgb(24, 105, 146);
   position: relative;
 }
@@ -26,7 +26,7 @@ header::after {
   content: '';
   height: 10px;
   width: 100%;
-  background: white;
+  background: #ccd6f6;
   left:0;
   right: 0;
   bottom: -1px;
@@ -62,22 +62,16 @@ a {
 }
 
 .btn {
-  background-color: rgb(34, 33, 33);
-  border-color: white;
+  background-color: rgba(23, 29, 36, 0.95);
+  border-color: #ccd6f6;
   cursor: pointer;
   border-radius: 0.6rem;
   width: 100%;
-  color: white;
+  color: #ccd6f6;
   font-size: 1rem;
   line-height: 1.375rem;
   min-height: 1.6rem;
+  margin-top: 1.1rem;
 }
 
-.btn-modal{
-  background-color: var(--light-gray);
-  border-radius: 0.5rem;
-  font-weight:bolder ;
-  text-align: left;
-  padding-left: 0.5em;
-}
 

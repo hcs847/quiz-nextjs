@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { server } from "../../config";
 import { useRouter } from 'next/router';
 import { getSubject } from "../api/quizes/[subject]";
@@ -6,22 +7,22 @@ import quizStyles from '../../styles/quiz.module.css'
 const Subject = ({ quiz }) => {
     const router = useRouter();
     const { subject } = router.query;
+    const [checked, setChecked] = useState(false);
+
+
     return (
         <>
             <h2 className={quizStyles.title}>{subject} Quiz</h2>
-            {quiz.map(q => (
-                <ul key={q.question}>
-                    <li className={quizStyles.question}>{q.question}</li>
-
-                    {q.answers.map(a => (
-                        <div className={quizStyles.answers} key={a}>
-                            <input type='checkbox' unchecked />
-                            {a}
-                        </div>
-                    ))
-                    }
-                </ul>
-            ))}
+            <div className={quizStyles.card_quiz}>
+                <div className={quizStyles.question}>{quiz[0].question}</div>
+                {quiz[0].answers.map(a => (
+                    <div className={quizStyles.answers} key={a}>
+                        {a}
+                    </div>
+                ))
+                }
+                <button type='button' className='btn'>Submit</button>
+            </div>
         </>
     );
 }
