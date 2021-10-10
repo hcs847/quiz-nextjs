@@ -5,7 +5,7 @@ export const getSubject = (subject) => {
     const questions = filteredSubject[0].questions.map((q) => (
         {
             question: q.description,
-            answers: q.answers.map(q => q.answerText)
+            answers: q.answers
         }
     )
     );

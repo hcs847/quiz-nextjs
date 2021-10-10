@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { server } from "../../config";
 import { useRouter } from 'next/router';
 import { getSubject } from "../api/quizes/[subject]";
@@ -8,26 +8,43 @@ const Subject = ({ quiz }) => {
     const router = useRouter();
     const { subject } = router.query;
     const [checked, setChecked] = useState({});
+    const [currentQuestion, setCurrentQuestion] = useState(0);
+    const [score, setScore] = useState(0);
     const toggleAnswer = (answer) => {
         // setting state to dynamically created element
-        setChecked({ [answer]: !checked[answer] })
+        setChecked({
+            [answer.answerText]: !checked[answer.answerText],
+            correct: answer.correct
+        });
     }
+    const handleSubmit = () => {
+        if (checked.correct) setScore(score + 1);
+        console.log('score==', score, quiz);
+        if (currentQuestion < quiz.length) setCurrentQuestion(currentQuestion + 1);
+        console.log("currQustion==", currentQuestion);
 
+    }
 
     return (
         <>
             <h2 className={quizStyles.title}>{subject} Quiz</h2>
-            <div className={quizStyles.card_quiz}>
-                <div className={quizStyles.question}>{quiz[0].question}</div>
-                {quiz[0].answers.map(a => (
-                    <div className={checked[a] ? quizStyles.answer__checked : quizStyles.answers} key={a}
-                        onClick={() => toggleAnswer(a)}>
-                        {a}
-                    </div>
-                ))
-                }
-                <button type='button' className='btn'>Submit</button>
-            </div>
+            {currentQuestion < quiz.length ? (
+                <div className={quizStyles.card_quiz}>
+                    <div className={quizStyles.question}>{quiz[currentQuestion].question}</div>
+                    {quiz[currentQuestion].answers.map(a => (
+                        <div className={checked[a.answerText] ? quizStyles.answer__checked : quizStyles.answers} key={a.answerText}
+                            onClick={() => toggleAnswer(a)}>
+                            {a.answerText}
+                        </div>
+                    ))
+                    }
+                    <button type='button' className='btn'
+                        onClick={() => handleSubmit()}>Submit</button>
+                </div>
+            ) : (
+                <div>Your Score is {score / quiz.length * 100}%</div>
+            )
+            }
         </>
     );
 }
