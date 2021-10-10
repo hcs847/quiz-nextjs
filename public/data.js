@@ -160,13 +160,39 @@ export const quizes = [{
     questions: [
 
         {
-            description: "How do you concatenate strings in JavaScript? ",
+            description: "What are CRUD operations? ",
             id: 11,
             answers: [{
                 answerText: "Create, Read, Update, Delete with their corresponding HTTP verbs: Post, Get, Put , Delete",
                 correct: true
+            },
+            {
+                answerText: "Create, React, Update, Derive",
+                correct: false
+            },
+            {
+                answerText: "Cut, Redo, Update, Delete",
+                correct: false
+            }
+            ]
+        },
 
-            }]
+        {
+            description: "What is a 403 error? ",
+            id: 12,
+            answers: [{
+                answerText: "Not found, the server cannot find the resource",
+                correct: false
+            },
+            {
+                answerText: "Invalid request",
+                correct: false
+            },
+            {
+                answerText: "forbidden, a user made a valid request but the server is refusing to serve due to lack of permission to access the resource.",
+                correct: true
+            }
+            ]
         }
     ]
 
@@ -175,11 +201,51 @@ export const quizes = [{
     subject: "react",
     questions: [
         {
-            description: "",
-            id: 12,
+            description: "Is React declarative or imperative",
+            id: 13,
             answers: [{
-                answerText: "",
-                correct: ""
+                answerText: "React is imperative since it's working directly with the DOM API",
+                correct: false
+            },
+            {
+                answerText: "React is declarative since it's only defines what it wants to be done.",
+                correct: true
+            },
+            {
+                answerText: "React is neither declarative nor imperative",
+                correct: false
+            }]
+        },
+        {
+            description: "What is the virtual DOM?",
+            id: 14,
+            answers: [{
+                answerText: "It's another name for the DOM.",
+                correct: false
+            },
+            {
+                answerText: "It's a sloewer version of the DOM.",
+                correct: false
+            },
+            {
+                answerText: "A lightweight Javascript representation of the DOM. Updating it is faster than updating the actual DOM since nothing has to be rendered into the screen.",
+                correct: true
+            }]
+        },
+        {
+            description: "What makes React different from other frameworks?",
+            id: 15,
+            answers: [{
+                answerText: "JSX and prop drilling.",
+                correct: true
+            },
+            {
+                answerText: "JSX and rendering.",
+                correct: false
+            },
+            {
+                answerText: "Ability to use Redux",
+                correct: false
             }]
         }
     ]
@@ -188,11 +254,53 @@ export const quizes = [{
     subject: "nextjs",
     questions: [
         {
-            description: "",
-            id: 13,
+            description: "What is Next.js?",
+            id: 16,
             answers: [{
-                answerText: "",
-                correct: ""
+                answerText: "A react framework for pre rendered websites of server side rendering or static site generation.",
+                correct: true
+            },
+            {
+                answerText: "A vue framwork of server side rendering.",
+                correct: false
+            },
+            {
+                answerText: "An angular framework of static site generation.",
+                correct: false
+            }
+            ]
+        },
+        {
+            description: "What is the layout component in Next JS?",
+            id: 17,
+            answers: [
+                {
+                    answerText: "The first component in the main page.",
+                    correct: false
+                },
+                {
+                    answerText: "A component that wraps all the pages in order to display the same upper lower content on every page by having access to the children.",
+                    correct: true
+                },
+                {
+                    answerText: "The navigation component of Next JS.",
+                    correct: false
+                }]
+        },
+        {
+            description: "What is the difference between getServerSideProps and getStaticProps?",
+            id: 18,
+            answers: [{
+                answerText: "The getServerSideProps method will fetch the data at the time of the request while getStaticProps will fetch the data at build time.",
+                correct: true
+            },
+            {
+                answerText: "There is no different between the two.",
+                correct: false
+            },
+            {
+                answerText: "The getServerSideProps method will fetch the data at build time while getStaticProps will fetch the data at the time of the request.",
+                correct: false
             }]
         }
     ]
@@ -202,7 +310,7 @@ export const quizes = [{
     questions: [
         {
             description: "",
-            id: 14,
+            id: 19,
             answers: [{
                 answerText: "",
                 correct: ""
@@ -215,7 +323,7 @@ export const quizes = [{
     questions: [
         {
             description: "",
-            id: 15,
+            id: 20,
             answers: [{
                 answerText: "",
                 correct: ""
@@ -228,7 +336,7 @@ export const quizes = [{
     questions: [
         {
             description: "",
-            id: 16,
+            id: 21,
             answers: [{
                 answerText: "",
                 correct: ""
@@ -241,7 +349,7 @@ export const quizes = [{
     questions: [
         {
             description: "",
-            id: 17,
+            id: 22,
             answers: [{
                 answerText: "",
                 correct: ""

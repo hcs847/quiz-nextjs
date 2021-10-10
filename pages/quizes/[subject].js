@@ -10,6 +10,7 @@ const Subject = ({ quiz }) => {
     const [checked, setChecked] = useState({});
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [score, setScore] = useState(0);
+    const [errorMessage, setErrorMessage] = useState('')
     const toggleAnswer = (answer) => {
         // setting state to dynamically created element
         setChecked({
@@ -19,10 +20,11 @@ const Subject = ({ quiz }) => {
     }
     const handleSubmit = () => {
         if (checked.correct) setScore(score + 1);
-        console.log('score==', score, quiz);
+        console.log('score==', score, quiz, Object.keys(checked).length, "checked length");
         if (currentQuestion < quiz.length) setCurrentQuestion(currentQuestion + 1);
         console.log("currQustion==", currentQuestion);
-
+        setChecked({});
+        setErrorMessage('');
     }
 
     return (
@@ -39,10 +41,12 @@ const Subject = ({ quiz }) => {
                     ))
                     }
                     <button type='button' className='btn'
-                        onClick={() => handleSubmit()}>Submit</button>
+                        // trigger submit action only if an answer was clicked
+                        onClick={Object.keys(checked).length && (() => handleSubmit()) || (() => setErrorMessage('Please select an answer'))}>Submit</button>
+                    {errorMessage && (<div className='errors'>{errorMessage}</div>)}
                 </div>
             ) : (
-                <div>Your Score is {score / quiz.length * 100}%</div>
+                <div>Your {subject} score is {score / quiz.length * 100}%</div>
             )
             }
         </>
