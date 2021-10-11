@@ -37,13 +37,13 @@ export const quizes = [{
             description: "What is the difference between property and method setup",
             id: 3,
             answers: [{
-                answerText: "Properties are set up without quatation marks",
+                answerText: "Properties are set up without quotation marks",
                 correct: false
             }, {
                 answerText: "A property setup syntax is: .property = value, while for Methods it’s: method( )",
                 correct: true
             }, {
-                answerText: "Methods are setup with at the begining of the code",
+                answerText: "Methods are setup with at the beginning of the code",
                 correct: false
             }]
         },
@@ -224,7 +224,7 @@ export const quizes = [{
                 correct: false
             },
             {
-                answerText: "It's a sloewer version of the DOM.",
+                answerText: "It's a slower version of the DOM.",
                 correct: false
             },
             {
@@ -309,11 +309,43 @@ export const quizes = [{
     subject: "node",
     questions: [
         {
-            description: "",
+            description: "What is Node.js?",
             id: 19,
             answers: [{
-                answerText: "",
-                correct: ""
+                answerText: "A virtual machine that uses javascript as its scripting language and runs Chrome's VS engine. Is an event driven architecture with asynchronous I/O.",
+                correct: true
+            }, {
+                answerText: "A library used to improve javascript web apps.",
+                correct: false
+            }, {
+                answerText: "A backend javascript framework that is needed to use react.",
+                correct: false
+            }]
+        }, {
+            description: "Is Node.js multi-threaded?",
+            id: 20,
+            answers: [{
+                answerText: "Yes, it is.",
+                correct: false
+            }, {
+                answerText: "No it isn't, threads are not relevant for Node.js.",
+                correct: false
+            }, {
+                answerText: "No, it is single-threaded, was created to try the theory of doing async processing on a single thread.",
+                correct: true
+            }]
+        }, {
+            description: "What is the purpose of module.exports?",
+            id: 21,
+            answers: [{
+                answerText: "It is used to expose function of a module or file in order to be used elsewhere in the project.",
+                correct: true
+            }, {
+                answerText: "Is used to export the project to a version control repository.",
+                correct: false
+            }, {
+                answerText: "Its purpose is to make the repo available online.",
+                correct: false
             }]
         }
     ]
@@ -322,11 +354,45 @@ export const quizes = [{
     subject: "graphQl",
     questions: [
         {
-            description: "",
-            id: 20,
+            description: "What is GraphQL?",
+            id: 22,
             answers: [{
-                answerText: "",
-                correct: ""
+                answerText: "A library for graphs manipulation",
+                correct: false
+            }, {
+                answerText: "An alternative to writing APIs using REST developed by facebook",
+                correct: true
+            }, {
+                answerText: "A graph tool for React",
+                correct: false
+            }]
+        },
+        {
+            description: "What are the benefits of GraphQL?",
+            id: 23,
+            answers: [{
+                answerText: "Easy to learn with great documentation.",
+                correct: false
+            }, {
+                answerText: "More compatible with javascript compared to REST.",
+                correct: false
+            }, {
+                answerText: "It retrieves only the minimum amount of data required by the client and can be limited to specific fields.",
+                correct: true
+            }]
+        },
+        {
+            description: "What is the difference between REST APIs and GraphQL?",
+            id: 24,
+            answers: [{
+                answerText: "GraphQL is the de facto standard for companies deploying APIs and launching developer platforms.",
+                correct: false
+            }, {
+                answerText: "In REST, the endpoint you call is seperate from how you fetch it.",
+                correct: false
+            }, {
+                answerText: "While REST API is an architectural concept for network-based software, GraphQL is a query language and a set of tools that operates over a single endpoint using HTTP.",
+                correct: true
             }]
         }
     ]
@@ -335,11 +401,43 @@ export const quizes = [{
     subject: "css",
     questions: [
         {
-            description: "",
-            id: 21,
+            description: "What is the difference between absolute and relative positioning?",
+            id: 25,
             answers: [{
-                answerText: "",
-                correct: ""
+                answerText: "An absulute position place an element at a specific layer while relative is in comparison to the screen size.",
+                correct: false
+            }, {
+                answerText: "By default, all the elements have a position: static. An element with position: absolute is positioned relative to its nearest positioned ancestor.",
+                correct: true
+            }, {
+                answerText: "Relative position is absolute and rarely used.",
+                correct: false
+            }]
+        }, {
+            description: "What is the difference between rem, em, and why do we need them?",
+            id: 26,
+            answers: [{
+                answerText: "In simple terms, em is relative to its parent whereas rem is relative to root font size. To remember this simply remember r in rem stands for root.",
+                correct: true
+            }, {
+                answerText: "2",
+                correct: false
+            }, {
+                answerText: "3",
+                correct: false
+            }]
+        }, {
+            description: "What is the box model?",
+            id: 27,
+            answers: [{
+                answerText: "1",
+                correct: false
+            }, {
+                answerText: "2",
+                correct: false
+            }, {
+                answerText: "The box-sizing property allows us to include the padding and border in an element’s total width and height.",
+                correct: true
             }]
         }
     ]
@@ -348,11 +446,43 @@ export const quizes = [{
     subject: "html",
     questions: [
         {
-            description: "",
-            id: 22,
+            description: "What is HTML",
+            id: 28,
             answers: [{
-                answerText: "",
-                correct: ""
+                answerText: "A Hypertext Markup Language. It is the typical documents’ markup language for developing web pages to display on the web browser.",
+                correct: true
+            }, {
+                answerText: "A Hypertext Machine Learning used for developing web pages.",
+                correct: false
+            }, {
+                answerText: "A Hyper Type Markup Library enabling web pages development in addition to javascript.",
+                correct: false
+            }]
+        }, {
+            description: "What is the key difference between HTML Elements and Tags?",
+            id: 29,
+            answers: [{
+                answerText: "A tag can be used only on sub elements like list items",
+                correct: false
+            }, {
+                answerText: "Elements are sections of the webpage, e.g:image while tags are used for elements to communicate with the browser on how to represent text, e.g.: <p>",
+                correct: true
+            }, {
+                answerText: "Only elements are represented in the DOM.",
+                correct: false
+            }]
+        }, {
+            description: "What is the HTML Layout?",
+            id: 30,
+            answers: [{
+                answerText: "An HTML web page is arranged in a specific layout (format) with primary sections of header, main and footer.",
+                correct: true
+            }, {
+                answerText: "The combination of elements within a web page.",
+                correct: false
+            }, {
+                answerText: "The order in which scripts are listed on an HTML page.",
+                correct: false
             }]
         }
     ]

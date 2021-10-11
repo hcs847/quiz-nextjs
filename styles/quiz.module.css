@@ -1,9 +1,12 @@
 .title {
     margin: 3rem 1rem;
-    text-transform: capitalize;
     position: relative;
     width:max-content;
+    text-transform: capitalize;
 } 
+.title span {
+    text-transform: uppercase;
+}
 .title::after {
     position: absolute;
     content: '';
@@ -81,5 +84,5 @@
     border: 1px solid #ccd6f6;
     border-radius: 10px;
     transition: color 0.15s ease, border-color 0.15s ease;
-    width: 95%;
+    width: 40vw;
   }

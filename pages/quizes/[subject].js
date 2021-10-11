@@ -7,6 +7,7 @@ import quizStyles from '../../styles/quiz.module.css'
 const Subject = ({ quiz }) => {
     const router = useRouter();
     const { subject } = router.query;
+    console.log(subject, '====subject router');
     const [checked, setChecked] = useState({});
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [score, setScore] = useState(0);
@@ -25,11 +26,17 @@ const Subject = ({ quiz }) => {
         console.log("currQustion==", currentQuestion);
         setChecked({});
         setErrorMessage('');
-    }
+    };
+
+    // reset score and current question when changing subject
+    useEffect(() => {
+        setScore(0);
+        setCurrentQuestion(0);
+    }, [subject])
 
     return (
         <>
-            <h2 className={quizStyles.title}>{subject} Quiz</h2>
+            <h2 className={quizStyles.title}><span>{subject}</span> quiz</h2>
             {currentQuestion < quiz.length ? (
                 <div className={quizStyles.card_quiz}>
                     <div className={quizStyles.question}>{quiz[currentQuestion].question}</div>
