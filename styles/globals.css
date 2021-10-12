@@ -16,7 +16,6 @@ body {
 
 header {
   grid-column: 1 / 9;
-  /* text-align: center; */
   background: rgba(170, 8, 94,0.75);
   color: rgb(24, 105, 146);
   position: relative;
@@ -30,6 +29,26 @@ header::after {
   left:0;
   right: 0;
   bottom: -1px;
+}
+
+.title {
+  margin: 3rem 1rem;
+  position: relative;
+  width:max-content;
+  text-transform: capitalize;
+} 
+.title span {
+  text-transform: uppercase;
+}
+.title::after {
+  position: absolute;
+  content: '';
+  height: 5px;
+  width: 100%;
+  background: rgb(109, 11, 63);
+  left:0;
+  right: 0;
+  bottom: -10px;
 }
 
 a {

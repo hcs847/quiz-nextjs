@@ -4,7 +4,6 @@
     background: #272e38;
     width: 15vw;
     padding-left: 0.5rem;
-    padding-top: 2rem;
   }
   
   .nav ul {
@@ -18,7 +17,7 @@
   .nav ul li a {
     margin: 0.5rem 1rem;
     display: block;
-    text-transform: uppercase;;
+    text-transform: uppercase;
     cursor: pointer;
   }
   
