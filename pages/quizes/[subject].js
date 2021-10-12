@@ -36,7 +36,7 @@ const Subject = ({ quiz }) => {
 
     return (
         <>
-            <h2 className={quizStyles.title}><span>{subject}</span> quiz</h2>
+            <h2 className='title'><span>{subject}</span> quiz</h2>
             {currentQuestion < quiz.length ? (
                 <div className={quizStyles.card_quiz}>
                     <div className={quizStyles.question}>{quiz[currentQuestion].question}</div>
@@ -53,7 +53,7 @@ const Subject = ({ quiz }) => {
                     {errorMessage && (<div className='errors'>{errorMessage}</div>)}
                 </div>
             ) : (
-                <div>Your {subject} score is {score / quiz.length * 100}%</div>
+                <div className={quizStyles.score}>You answered {score} questions correctly out of {quiz.length} in <span>{subject}.</span></div>
             )
             }
         </>

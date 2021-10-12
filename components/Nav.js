@@ -7,7 +7,7 @@ export default function Nav() {
 
     return (
         <nav className={navStyles.nav}>
-            <h3>Subjects</h3>
+            <h3 className='title'>Quizzes</h3>
             <ul>
                 {subjects.map(subject => (
                     <li key={subject}>
