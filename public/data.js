@@ -34,7 +34,7 @@ export const quizes = [{
         },
         {
 
-            description: "What is the difference between property and method setup",
+            description: "What is the difference between property and method setup?",
             id: 3,
             answers: [{
                 answerText: "Properties are set up without quotation marks",
@@ -201,7 +201,7 @@ export const quizes = [{
     subject: "react",
     questions: [
         {
-            description: "Is React declarative or imperative",
+            description: "Is React declarative or imperative?",
             id: 13,
             answers: [{
                 answerText: "React is imperative since it's working directly with the DOM API",
@@ -446,7 +446,7 @@ export const quizes = [{
     subject: "html",
     questions: [
         {
-            description: "What is HTML",
+            description: "What is HTML?",
             id: 28,
             answers: [{
                 answerText: "A Hypertext Markup Language. It is the typical documents’ markup language for developing web pages to display on the web browser.",
