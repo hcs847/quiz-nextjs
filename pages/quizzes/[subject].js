@@ -1,13 +1,12 @@
 import { useState, useEffect } from "react";
 import { server } from "../../config";
 import { useRouter } from 'next/router';
-import { getSubject } from "../api/quizes/[subject]";
+import { getSubject } from "../api/quizzes/[subject]";
 import quizStyles from '../../styles/quiz.module.css'
 
 const Subject = ({ quiz }) => {
     const router = useRouter();
     const { subject } = router.query;
-    console.log(subject, '====subject router');
     const [checked, setChecked] = useState({});
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [score, setScore] = useState(0);
@@ -21,9 +20,7 @@ const Subject = ({ quiz }) => {
     }
     const handleSubmit = () => {
         if (checked.correct) setScore(score + 1);
-        console.log('score==', score, quiz, Object.keys(checked).length, "checked length");
         if (currentQuestion < quiz.length) setCurrentQuestion(currentQuestion + 1);
-        console.log("currQustion==", currentQuestion);
         setChecked({});
         setErrorMessage('');
     };
@@ -70,9 +67,9 @@ export const getStaticProps = async (context) => {
 }
 
 export const getStaticPaths = async () => {
-    const res = await fetch(`${server}api/quizes`);
-    const quizes = await res.json();
-    const subjects = quizes.data.map((quiz) => quiz.subject);
+    const res = await fetch(`${server}api/quizzes`);
+    const quizzes = await res.json();
+    const subjects = quizzes.data.map((quiz) => quiz.subject);
     const paths = subjects.map((subject) => ({ params: { subject } }));
 
     return {

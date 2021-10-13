@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import navStyles from '../styles/Nav.module.css';
-import { getSubjects } from '../pages/api/quizes'
+import { getSubjects } from '../pages/api/quizzes'
 
 export default function Nav() {
     const subjects = getSubjects();
@@ -11,7 +11,7 @@ export default function Nav() {
             <ul>
                 {subjects.map(subject => (
                     <li key={subject}>
-                        <Link href={`/quizes/${subject}`}>{subject}</Link>
+                        <Link href={`/quizzes/${subject}`}>{subject}</Link>
                     </li>
                 ))}
             </ul>

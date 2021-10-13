@@ -7,7 +7,7 @@ The Javascript intervie prep app is your go to place when searching fo jobs as a
 The application is written with Next,js as a static web app, fetching data from json files and deployed on Vercel.
 
 Is is still work in progress in terms of functionality and content and
-Current version can be access through this [url](https://https://quiz-nextjs-xi.vercel.app/quizes/javascript)
+Current version can be access through this [url](https://https://quiz-nextjs-xi.vercel.app/quizzes/javascript)
 
 ![](public/page-demo.png)
 

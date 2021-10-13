@@ -1,4 +1,4 @@
-export const quizes = [{
+export const quizzes = [{
 
     subject: "javascript",
     questions: [
