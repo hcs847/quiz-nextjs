@@ -1,8 +1,4 @@
-import { quizzes } from '/public/data/quizzes';
-
-export const getQuizzes = () => {
-    return { data: quizzes };
-}
+import { quizzes } from '/public/data';
 
 export const getSubjects = () => {
     const subjects = quizzes.map(q => q.subject);
@@ -10,5 +6,5 @@ export const getSubjects = () => {
 }
 
 export default function handler(req, res) {
-    res.status(200).json(getQuizzes());
+    res.status(200).json(quizzes);
 }
