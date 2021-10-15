@@ -15,6 +15,14 @@ export default function Nav() {
                     </li>
                 ))}
             </ul>
+            <h3 className='title'>Code Snippets</h3>
+            {/* temporarily hardcoding code snippet link and text */}
+            {/* ================================================= */}
+            <ul>
+                <li>
+                    <Link href={`/snippets/react`}>React</Link>
+                </li>
+            </ul>
         </nav>
     )
 }

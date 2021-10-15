@@ -1,4 +1,4 @@
-import { quizzes } from '/public/data/quizzes';
+import { quizzes } from '/public/data';
 
 export const getSubject = (subject) => {
     const filteredSubject = quizzes.filter(question => question.subject === subject);
@@ -13,7 +13,7 @@ export const getSubject = (subject) => {
 }
 
 export default function handler({ query: { subject } }, res) {
-    if (subject) {
+    if (subject.length) {
         res.status(200).json(getSubject(subject));
     } else {
         res.status(404).json({ message: `subject is not found` })

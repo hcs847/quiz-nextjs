@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { server } from "../../config";
 import { useRouter } from 'next/router';
 import { getSubject } from "../api/quizzes/[subject]";
+import { getSubjects } from "../api/quizzes";
 import quizStyles from '../../styles/quiz.module.css'
 
 const Subject = ({ quiz }) => {
@@ -67,9 +68,7 @@ export const getStaticProps = async (context) => {
 }
 
 export const getStaticPaths = async () => {
-    const res = await fetch(`${server}api/quizzes`);
-    const quizzes = await res.json();
-    const subjects = quizzes.data.map((quiz) => quiz.subject);
+    const subjects = getSubjects();
     const paths = subjects.map((subject) => ({ params: { subject } }));
 
     return {
