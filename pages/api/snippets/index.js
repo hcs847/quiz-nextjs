@@ -28,8 +28,10 @@ export const getSnippets = () => {
     return snippets;
 }
 
-export default function handler(req, res) {
+async function handler(req, res) {
     // Run the middleware
-    runMiddleware(req, res, cors);
+    await runMiddleware(req, res, cors);
     res.status(200).json(getSnippets());
 }
+
+export default handler;
