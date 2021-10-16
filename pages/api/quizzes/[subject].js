@@ -16,6 +16,6 @@ export default function handler({ query: { subject } }, res) {
     if (subject.length) {
         res.status(200).json(getSubject(subject));
     } else {
-        res.status(404).json({ message: `subject is not found` })
+        res.status(404).json({ message: `${subject} not found.` })
     }
 }

@@ -1,9 +1,21 @@
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import navStyles from '../styles/Nav.module.css';
-import { getSubjects } from '../pages/api/quizzes'
+import { getSubjects } from '../pages/api/quizzes';
+import { server } from "../config";
 
 export default function Nav() {
     const subjects = getSubjects();
+    const [snippetsList, setSnippetList] = useState([]);
+    const getSnippets = async () => {
+        const res = await fetch(`${server}api/snippets`);
+        const snippets = await res.json();
+        setSnippetList(...snippetsList, snippets);
+    }
+
+    useEffect(() => {
+        getSnippets();
+    }, [])
 
     return (
         <nav className={navStyles.nav}>
@@ -16,12 +28,15 @@ export default function Nav() {
                 ))}
             </ul>
             <h3 className='title'>Code Snippets</h3>
-            {/* temporarily hardcoding code snippet link and text */}
-            {/* ================================================= */}
             <ul>
-                <li>
-                    <Link href={`/snippets/react`}>React</Link>
-                </li>
+                {snippetsList.map(s => (
+                    <li key={s.snippet}>
+                        <Link href={`/snippets/${s.snippet}`}>{s.snippet}</Link>
+                    </li>
+                ))}
+                {/* <li>
+                    <Link href={`/snippets/counter`}>Counter</Link>
+                </li> */}
             </ul>
         </nav>
     )

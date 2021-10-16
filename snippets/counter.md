@@ -1,7 +1,7 @@
 ---
-slug: react
-title: counter
-level: beginer
+slug: counter
+title: react counter snippet
+level: beginner
 ---
 ```javascript
 import { useState, useEffect } from 'react';
