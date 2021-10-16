@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { server } from "../../config";
 import { useRouter } from 'next/router';
 import { getSubject } from "../api/quizzes/[subject]";
 import { getSubjects } from "../api/quizzes";

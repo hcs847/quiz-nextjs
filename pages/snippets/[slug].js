@@ -3,7 +3,6 @@ import path from 'path';
 import ReactMarkdown from "react-markdown";
 import matter from 'gray-matter';
 import { PrismAsync as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { Children } from 'react';
 import { dracula } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
 const CodeBlock = ({ value }) => {
@@ -21,7 +20,7 @@ const Snippets = ({ htmlString }) => {
             {htmlString}
         </ReactMarkdown>
     )
-}
+};
 
 
 export const getStaticPaths = async () => {
