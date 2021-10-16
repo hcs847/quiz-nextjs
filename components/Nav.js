@@ -15,6 +15,7 @@ export default function Nav() {
 
     useEffect(() => {
         getSnippets();
+        console.log(getSnippets(), "useEffect")
     }, [])
 
     return (
