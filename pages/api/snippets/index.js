@@ -31,6 +31,7 @@ export const getSnippets = () => {
 async function handler(req, res) {
     // Run the middleware
     await runMiddleware(req, res, cors);
+    console.log(await runMiddleware(req, res, cors), "===result")
     res.status(200).json(getSnippets());
 }
 

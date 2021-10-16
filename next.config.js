@@ -4,7 +4,7 @@ module.exports = {
     return [
       {
         // matching all API routes
-        source: "/api/snippets/:path*",
+        source: "/api/snippets",
         headers: [
           { key: "Access-Control-Allow-Credentials", value: "true" },
           { key: "Access-Control-Allow-Origin", value: "*" },
