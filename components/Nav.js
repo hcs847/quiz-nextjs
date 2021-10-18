@@ -1,22 +1,23 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import useSWR from "swr";
 import navStyles from '../styles/Nav.module.css';
 import { getSubjects } from '../pages/api/quizzes';
 import { server } from "../config";
 
 export default function Nav() {
     const subjects = getSubjects();
-    const [snippetsList, setSnippetList] = useState([]);
-    const getSnippets = async () => {
-        const res = await fetch(`${server}api/snippets`);
-        const snippets = await res.json();
-        setSnippetList(...snippetsList, snippets);
+
+    const fetcher = url => fetch(url).then(res => res.json());
+
+    const useGetSnippets = url => {
+        const { data: snippets, error } = useSWR(url, fetcher);
+
+        return { snippets, error }
     }
 
-    useEffect(() => {
-        getSnippets();
-        console.log(getSnippets(), "useEffect")
-    }, [])
+    const { snippets, error } = useGetSnippets(`${server}api/snippets`);
+
 
     return (
         <nav className={navStyles.nav}>
@@ -30,14 +31,11 @@ export default function Nav() {
             </ul>
             <h3 className='title'>Code Snippets</h3>
             <ul>
-                {snippetsList.map(s => (
+                {snippets.map(s => (
                     <li key={s.snippet}>
                         <Link href={`/snippets/${s.snippet}`}>{s.snippet}</Link>
                     </li>
                 ))}
-                {/* <li>
-                    <Link href={`/snippets/counter`}>Counter</Link>
-                </li> */}
             </ul>
         </nav>
     )
