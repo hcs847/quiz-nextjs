@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
 import useSWR from "swr";
 import navStyles from '../styles/Nav.module.css';
 import { getSubjects } from '../pages/api/quizzes';
@@ -9,15 +8,15 @@ export default function Nav() {
     const subjects = getSubjects();
 
     const fetcher = url => fetch(url).then(res => res.json());
-
     const useGetSnippets = url => {
         const { data: snippets, error } = useSWR(url, fetcher);
-
         return { snippets, error }
     }
 
     const { snippets, error } = useGetSnippets(`${server}api/snippets`);
 
+    if (error) return <h1>Something wnet wrong!</h1>
+    if (!snippets) return <h1>Loading ...</h1>
 
     return (
         <nav className={navStyles.nav}>
