@@ -1,4 +1,4 @@
-import { quizzes } from '/public/data';
+import { quizzes } from '../../../public/data.js';
 
 export const getSubjects = () => {
     const subjects = quizzes.map(q => q.subject);

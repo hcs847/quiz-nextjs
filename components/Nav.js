@@ -2,10 +2,15 @@ import Link from 'next/link';
 import useSWR from "swr";
 import navStyles from '../styles/Nav.module.css';
 import { getSubjects } from '../pages/api/quizzes';
-import { server } from "../config";
+import { getSnippets } from '../pages/api/snippets';
+// import { server } from "../config";
+// import { snippetJson } from '/public/snippets.js';
 
 export default function Nav() {
     const subjects = getSubjects();
+    const snippets = getSnippets();
+
+    // console.log(snippetJson, "==snippet json");
 
     // const fetcher = url => fetch(url).then(res => res.json());
     // const useGetSnippets = url => {
@@ -18,17 +23,17 @@ export default function Nav() {
     // if (error) return <h1>Something wnet wrong!</h1>
     // if (!snippets) return <h1>Loading ...</h1>
 
-    const snippets = [
-        {
-            "snippet": "counter"
-        },
-        {
-            "snippet": "dropdown"
-        },
-        {
-            "snippet": "fetch"
-        }
-    ];
+    // const snippets = [
+    //     {
+    //         "snippet": "counter"
+    //     },
+    //     {
+    //         "snippet": "dropdown"
+    //     },
+    //     {
+    //         "snippet": "fetch"
+    //     }
+    // ];
 
     return (
         <nav className={navStyles.nav}>
@@ -42,9 +47,9 @@ export default function Nav() {
             </ul>
             <h3 className='title'>Code Snippets</h3>
             <ul>
-                {snippets.map(s => (
-                    <li key={s.snippet}>
-                        <Link href={`/snippets/${s.snippet}`}>{s.snippet}</Link>
+                {snippets.map(snippet => (
+                    <li key={snippet}>
+                        <Link href={`/snippets/${snippet}`}>{snippet}</Link>
                     </li>
                 ))}
             </ul>

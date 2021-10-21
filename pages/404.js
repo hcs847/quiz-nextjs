@@ -2,15 +2,15 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/dist/client/router';
 import Link from 'next/link';
 
-const FourOhFour = () => {
+function FourOhFour() {
     const router = useRouter();
 
-    useEffect(() => {
-        // redirect users to homepage after 3 sec
-        setTimeout(() => {
-            router.push('/');
-        }, 3000)
-    }, [router]);
+    // useEffect(() => {
+    //     // redirect users to homepage after 3 sec
+    //     setTimeout(() => {
+    //         router.push('/');
+    //     }, 3000)
+    // }, [router]);
 
     return (
         <div className='not-found'>
