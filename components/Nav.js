@@ -14,7 +14,7 @@ export default function Nav() {
     }
 
     const { snippets, error } = useGetSnippets(`${server}api/snippets`);
-
+    console.log("error ===", error);
     if (error) return <h1>Something wnet wrong!</h1>
     if (!snippets) return <h1>Loading ...</h1>
 
