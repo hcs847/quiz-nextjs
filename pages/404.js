@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/dist/client/router';
 import Link from 'next/link';
 
-const NotFound = () => {
+const FourOhFour = () => {
     const router = useRouter();
 
     useEffect(() => {
@@ -21,4 +21,4 @@ const NotFound = () => {
     );
 }
 
-export default NotFound;
+export default FourOhFour;

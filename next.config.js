@@ -4,7 +4,7 @@ module.exports = {
     return [
       {
         source: '/api/:slug*',
-        destination: '/:slug*',
+        destination: 'https://quiz-nextjs-xi.vercel.app/:slug*',
       },
     ]
   },
