@@ -1,4 +1,4 @@
-import { quizzes } from '../../../public/data';
+import { quizzes } from '/public/data';
 
 export const getSubject = (subject) => {
     const filteredSubject = quizzes.filter(question => question.subject === subject);

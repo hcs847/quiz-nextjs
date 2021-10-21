@@ -1,4 +1,4 @@
-import { snippets } from '../../../public/snippets.js';
+import { snippets } from '/public/snippets';
 
 export const getSnippets = () => {
     const snippetList = snippets.map(s => s.snippet);
