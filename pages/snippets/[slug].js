@@ -30,6 +30,17 @@ export const getStaticPaths = async () => {
             slug: fileName.replace('.md', ''),
         },
     }));
+    const cachedPaths = JSON.stringify(files.map((fileName) => (
+        {
+            snippet: fileName.replace('.md', '')
+        }
+    )
+    ));
+
+    fs.writeFile('public/snippets.js', 'export const snippets =' + cachedPaths, err => {
+        if (err) return console.log(err);
+        console.log('Posts cached');
+    })
     return {
         paths,
         fallback: false,
