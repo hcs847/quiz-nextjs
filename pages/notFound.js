@@ -1,6 +1,6 @@
-import { useEffect } from 'react';
-import { useRouter } from 'next/dist/client/router';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
+// import { useEffect } from 'react';
 
 function FourOhFour() {
     const router = useRouter();
