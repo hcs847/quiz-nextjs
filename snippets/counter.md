@@ -23,8 +23,14 @@ function App() {
         <div className="App">
             <h1>Hello React Challenges</h1>
             <p style={{ fontWeight: '700' }}>{counter}</p>
-            <button type='button' onClick={handleIncrementCounter} style={{ margin: '3px' }}>+</button>
-            <button type='button' onClick={handleDecrementCounter} style={{ margin: '3px' }}>-</button>
+            <button 
+            type='button' 
+            onClick={handleIncrementCounter} 
+            style={{ margin: '3px' }}>+</button>
+            <button 
+            type='button' 
+            onClick={handleDecrementCounter} 
+            style={{ margin: '3px' }}>-</button>
         </div >
     );
 }
