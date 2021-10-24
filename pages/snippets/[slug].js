@@ -2,26 +2,36 @@ import fs from 'fs';
 import path from 'path';
 import ReactMarkdown from "react-markdown";
 import matter from 'gray-matter';
-import { PrismAsync as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { dracula } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { xonokai } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
-const CodeBlock = ({ value }) => {
-    return (
-        <SyntaxHighlighter style={dracula}>
-            {value}
-        </SyntaxHighlighter>
-    )
+const CodeBlock = {
+    code({ node, inline, className, children, ...props }) {
+        const language = 'javascript'
+        return !inline && language ? (
+            <SyntaxHighlighter
+                style={xonokai}
+                language={language}
+                PreTag="div" {...props}>
+                {String(children).replace(/\n$/, '')}
+            </SyntaxHighlighter>
+
+        ) : (
+            <code className={className} {...props}>
+                {children}
+            </code>
+        )
+    }
 }
 
 const Snippets = ({ htmlString }) => {
     return (
         <ReactMarkdown
-            object={CodeBlock}>
+            components={CodeBlock}>
             {htmlString}
         </ReactMarkdown>
     )
 };
-
 
 export const getStaticPaths = async () => {
     const files = fs.readdirSync('snippets');
