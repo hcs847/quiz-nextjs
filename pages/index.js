@@ -5,7 +5,7 @@ export default function Home() {
     <>
       <Head>
         <title>Interview prep JS | Home</title>
-        <meta name='keywords' content='javascript quiz' />
+        <meta name='description' content='javascript html css quiz full stack interview prep react code snippets next.js questions' />
       </Head>
       <h1>
         Welcome to your javascript interview prep site.
