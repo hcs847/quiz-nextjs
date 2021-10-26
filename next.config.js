@@ -18,7 +18,7 @@ module.exports = {
     return [
       {
         source: '/api/:slug*',
-        destination: 'https://quiz-nextjs-xi.vercel.app/:slug*',
+        destination: 'https://javascript-int-prep.vercel.app/:slug*',
       },
     ]
   },
